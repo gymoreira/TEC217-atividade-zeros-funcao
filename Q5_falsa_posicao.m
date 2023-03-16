@@ -1,36 +1,51 @@
-u = 1800;     % velocidade na qual o combustível é expelido em relação ao fogueta
+u = 1800; % velocidade na qual o combustível é expelido em relação ao foguete
 m0 = 1600000; % massa inicial do foguete no instante t = 0
-q = 2600;     % taxa de consumo do combustível
-g = 9.81;     % aceleração da gravidade
+q = 2600; % taxa de consumo do combustível
+g = 9.81; % aceleração da gravidade
 
-v = @(t) u*log(m0/(m0-q*t)) - g*t; % função da velocidade de subida do foguete
+% função para calcular a velocidade de subida do foguete
+f = @(t) u*log(m0/(m0-q*t))-g*t;
 
-% valores iniciais do intervalo [a, b]
-a = 10;      
+% limite inferior e superior do intervalo de busca
+a = 10;
 b = 50;
 
-% precisão desejada (1%)
+% tolerância de erro
 tol = 0.01;
 
-while abs(b - a) > tol
+% número máximo de iterações
+maxiter = 100;
+
+% inicialização do erro
+err = Inf;
+
+% número de iterações
+iter = 0;
+
+while err > tol && iter < maxiter
     % cálculo dos valores da função nos pontos a e b
-    fa = v(a) - 750;
-    fb = v(b) - 750;
+    fa = f(a);
+    fb = f(b);
     
-    % cálculo do ponto c
-    c = (a*fb - b*fa)/(fb - fa);
+    % cálculo do ponto c pela regra da falsa posição
+    c = b - (fb*(b-a))/(fb-fa);
     
     % cálculo do valor da função no ponto c
-    fc = v(c) - 750;
+    fc = f(c);
     
-    % atualização do intervalo [a, b]
+    % atualização do intervalo de busca
     if fa*fc < 0
         b = c;
     else
         a = c;
     end
+    
+    % atualização do erro
+    err = abs(fc);
+    
+    % atualização do número de iterações
+    iter = iter + 1;
 end
 
-% resultado
-t = (a + b)/2;
-disp(['O tempo em que a velocidade é igual a 750 m/s é: ', num2str(t), ' s']);
+% exibição do resultado
+printf("Tempo em que a velocidade é 750m/s: %.2f s\n", c);
