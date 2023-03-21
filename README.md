@@ -1,4 +1,10 @@
+# TEC 217 – Métodos Computacionais
 # Lista - Zeros de Função 
+
+## Alunos
+- Aurélio Barreto
+- Gabriel Yago
+- Kevin Cerqueira
 
 ## Saída/Console:
 ### Questão 01
