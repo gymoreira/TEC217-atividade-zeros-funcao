@@ -27,4 +27,4 @@ for i = 1:max_iterations
     end
 end
 
-fprintf('Tempo no qual v = 750 m/s: %f s\n', c);
+fprintf('Tempo no qual v = 750 m/s: %f s\n\n\n\n', c);

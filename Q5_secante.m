@@ -18,4 +18,4 @@ while abs(x1-x0)/x1 > tol
 end
 
 t = x1;
-fprintf('O tempo em que v = %d m/s é: %.2f s\n', v, t);
+fprintf("Tempo no qual v = 750 m/s: %.2f s\n\n\n\n", t);

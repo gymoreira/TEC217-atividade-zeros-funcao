@@ -48,4 +48,5 @@ while err > tol && iter < maxiter
 end
 
 % exibição do resultado
-printf("Tempo em que a velocidade é 750m/s: %.2f s\n", c);
+% printf("Tempo em que a velocidade é 750m/s: %.2f s\n", c);
+fprintf('Tempo no qual v = 750 m/s: %f s\n\n\n\n', c);

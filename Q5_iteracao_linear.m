@@ -14,7 +14,8 @@ for i = 1:100
     
     % verificar se a solução foi encontrada com a tolerância de erro
     if abs(v - 750) < epsilon * 750
-        printf("O tempo t = %.2f s\n", t);
+        % printf("O tempo t = %.2f s\n", t);
+        fprintf("Tempo no qual v = 750 m/s: %.2f s\n\n\n\n", t);
         break;
     end
     

@@ -8,6 +8,6 @@
 ### Questão 03
 ![Q3_console](https://github.com/KevinCerqueira/TEC217-atividade-zeros-funcao/blob/main/Q3_console.png)
 ### Questão 05
-![Q5_console](https://github.com/KevinCerqueira/TEC217-atividade-zeros-funcao/blob/main/Q5_console.png)
+![Q5_console](https://github.com/KevinCerqueira/TEC217-atividade-zeros-funcao/blob/main/Q5_console_v2.png)
 ### Questão 06
 ![Q6_console](https://github.com/KevinCerqueira/TEC217-atividade-zeros-funcao/blob/main/Q6_console.png)
